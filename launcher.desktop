@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Minecraft Launcher (bash)
+Comment=Запускает Minecraft через bash-скрипт
+Exec=/path/to/launcher.sh
+Icon=application-x-executable
+Terminal=false
+Categories=Game;
