@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Minecraft Scanner
+Exec=/workspaces/forg/run.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Utility;
