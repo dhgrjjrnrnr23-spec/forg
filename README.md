@@ -1,25 +1,73 @@
-# Простой лаунчер Minecraft (bash-only)
+# 🎮 Minecraft Launcher
 
-Это минимальный лаунчер, полностью написанный на Bash. Не требуется Python или другие зависимости — достаточно рабочей оболочки.
+Многоплатформенный лаунчер Minecraft на **Bash**, **HTML/JavaScript**, и **Python**.
 
-## Как использовать
+> **Лаунчер не устанавливает Minecraft.** Он только запускает уже имеющуюся копию игры.
 
-1. Скопируйте или установите Minecraft обычным способом.
-2. Сделайте скрипт исполняемым:
+---
 
-   ```bash
-   chmod +x launcher.sh
-   ```
+## 📋 Доступные версии
 
-3. Запустите:
+| Файл | Язык | Назначение | Требования |
+|------|------|-----------|-----------|
+| `launcher.sh` | Bash | Запуск из терминала (Linux/Mac/WSL) | Bash, Java (для JAR) |
+| `launcher.bat` | Windows Batch | Запуск на Windows | Git Bash или WSL |
+| `launcher.html` | HTML/JavaScript | Веб-интерфейс | Браузер |
 
-   ```bash
-   ./launcher.sh
-   ```
+---
 
-4. Если рядом с `launcher.sh` находится сам исполняемый файл Minecraft (например, `minecraft`, `Minecraft.jar` или `MinecraftLauncher.exe`), он будет автоматически обнаружен и запущен без дополнительных вопросов.
+## 🚀 Как использовать
 
-5. В противном случае выведите путь к исполняемому файлу (например, `/usr/bin/minecraft` или `~/Games/Minecraft/MinecraftLauncher.exe` под Wine). Скрипт запустит указанный файл и выйдет.
+### 1️⃣ **Bash версия** (Linux/Mac/WSL)
+
+```bash
+chmod +x launcher.sh
+./launcher.sh
+```
+
+- **Автодетект**: если Minecraft лежит в той же папке, запустится автоматически
+- **Интерактивный ввод**: если не найден, попросит путь
+- **Поддержка**: JAR, EXE, бинарники
+
+**Примеры:**
+```bash
+# С автодетектом
+./launcher.sh
+
+# С явным путем
+./launcher.sh "/path/to/minecraft.jar"
+
+# С аргументами для игры
+./launcher.sh "/path/to/minecraft" --server myserver.com
+```
+
+### 2️⃣ **Windows версия** (.bat)
+
+```bash
+launcher.bat
+```
+
+Или двойной клик по файлу. Автоматически найдет Git Bash или WSL.
+
+### 3️⃣ **Веб-версия** (HTML)
+
+Откройте `launcher.html` в браузере:
+
+```bash
+# Linux/Mac
+open launcher.html
+xdg-open launcher.html
+
+# Windows
+start launcher.html
+```
+
+**Особенности:**
+- Красивый интерфейс
+- Сохранение недавних файлов (localStorage)
+- Цветные статус-сообщения
+
+
 
 ### Запуск «кликом»
 
