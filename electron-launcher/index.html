@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаунчер Minecraft</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #path {
+      width: 80%;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Простой лаунчер Minecraft</h1>
+  <input type="text" id="path" placeholder="Путь к Minecraft" readonly />
+  <br />
+  <button id="browse">Выбрать файл...</button>
+  <button id="launch">Запустить</button>
+  <p id="status"></p>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
